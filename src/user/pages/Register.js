@@ -139,9 +139,9 @@ function Register() {
             reqBody.append("email", email)
             reqBody.append("location",location)
             reqBody.append("state",state)
-            reqBody.append("resume",resume)
+            // reqBody.append("resume",resume) ## REPEATED CODE!!
             
-            const result = await userRegisterApi(reqBody, reqHeader)
+            const result = await userRegisterApi(reqHeader, reqBody)
             console.log(result); 
             if (result.status>= 200 && result.status < 300) {
                 alert("Registered Successfully")

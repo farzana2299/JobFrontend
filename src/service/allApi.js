@@ -24,7 +24,7 @@ export const addJobApi = async (data, header) => {
   }
 
   export const userRegisterApi = async (header,data) => {
-    return await commonApi('POST', `${BASE_URL}/user/register`, header, data,)
+    return await commonApi('POST', `${BASE_URL}/user/register`, data, header)
   }
   export const userLoginApi = async (body) => {
     return await commonApi('POST', `${BASE_URL}/user/login`, body, "")
@@ -39,5 +39,5 @@ export const addJobApi = async (data, header) => {
     return await commonApi('GET', `${BASE_URL}/user/get-limited-jobs`, "", "")
   }
   export const applyJobApi = async (header,data) => {
-    return await commonApi('POST', `${BASE_URL}/user/applyJob`, header, data,)
+    return await commonApi('POST', `${BASE_URL}/user/apply/job`, data, header) //CORRECTED URL
   }
